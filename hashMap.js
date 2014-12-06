@@ -10,10 +10,8 @@ hashMap.prototype.add=function(_key,_value){
         ++this.size;
     }
     else if(this.debug)
-    {
         throw 'duplicate keys not allowed. key : '+_key;
-        return;
-    }
+    
 }
 hashMap.prototype.addAll=function(_keyArray,_valueArray){
     //note:addAll
@@ -32,10 +30,7 @@ hashMap.prototype.remove=function(_key){
         --this.size;
     }
     else if(this.debug)
-    {
         throw 'key not found';
-        return;
-    }
 }
 hashMap.prototype.get=function(_key){
     if (this.hashArray.hasOwnProperty(_key))
@@ -43,8 +38,5 @@ hashMap.prototype.get=function(_key){
         return this.hashArray[_key];
     }
     else if(this.debug)
-    {
         throw 'no key found';
-        return;
-    }
 }
