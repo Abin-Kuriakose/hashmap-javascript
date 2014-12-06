@@ -1,3 +1,4 @@
+//Abin Kuriakose
 var hashMap=function(){
     this.hashDict={};//dictionary
     this.size=0;
