@@ -5,7 +5,7 @@ var hashMap=function(){
     this.debug=true;
     return this;
 }
-hashMap.prototype.add=function(_key,_value){
+hashMap.prototype.put=function(_key,_value){
     if (!this.hashDict.hasOwnProperty(_key)) {
         this.hashDict[_key] = _value;
         ++this.size;
@@ -14,7 +14,7 @@ hashMap.prototype.add=function(_key,_value){
         throw 'duplicate keys not allowed. key : '+_key;
     
 }
-hashMap.prototype.addAll=function(_keyArray,_valueArray){
+hashMap.prototype.putAll=function(_keyArray,_valueArray){
     if(_keyArray.length===_valueArray.length) {
         _l=_keyArray.length;
         for(i=0;i<_l;i++) {
